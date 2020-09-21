@@ -5,8 +5,6 @@ class ComboIndividual(var sanduiche: List<Sanduiche>, var acompanhamento: Mutabl
         for (sanduiche in sanduiche) {
             preco += sanduiche.preco
         }
-        for (acompanhamento in acompanhamento) {
-            preco += acompanhamento.preco;
-        }
+        acompanhamento.forEach { acompanhamento -> preco += acompanhamento.preco }
     }
 }
