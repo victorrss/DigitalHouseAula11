@@ -9,4 +9,4 @@ interface Combo {
     fun aplicarDesconto() {
         preco -= preco * desconto / 100
     }
-}
+}   

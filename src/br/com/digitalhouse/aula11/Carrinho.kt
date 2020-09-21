@@ -13,7 +13,7 @@ class Carrinho {
         println("O acompanhamento ${acom.nome}(${acom.tamanho}), sabor ${acom.sabor} no valor de ${acom.preco} foi adicionado no carrinho")
     }
 
-    fun adicionarCombo(cb: Combos) {
+    fun adicionarCombo(cb: Combo) {
         precoTotal += cb.preco - cb.desconto
         println("O combo ${cb.nome}(${cb.preco}) foi adicionado no carrinho")
     }
