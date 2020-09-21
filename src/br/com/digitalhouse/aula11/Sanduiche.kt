@@ -1,6 +1,6 @@
 package br.com.digitalhouse.aula11
 
-class Sanduiche (
+class Sanduiche(
         val sabor: String,
         val preco: Double
 )

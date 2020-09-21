@@ -6,7 +6,7 @@ interface Combo {
     var desconto: Double
 
     fun somarPreco()
-    fun aplicarDesconto(){
-        preco -= preco*desconto/100
+    fun aplicarDesconto() {
+        preco -= preco * desconto / 100
     }
 }
