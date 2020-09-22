@@ -1,6 +1,6 @@
 package br.com.digitalhouse.aula11
 
-import br.com.digitalhouse.aula11.util.FormatUtil
+import br.com.digitalhouse.aula11.util.currencyFmt
 
 class ComboIndividual(
         var sanduiches: List<Sanduiche>,
@@ -11,7 +11,7 @@ class ComboIndividual(
 
     init {
         somarPreco()
-        println("Combo $nome criado, valor total ${FormatUtil.currencyFmt(preco)}")
+        println("Combo $nome criado, valor total ${preco.currencyFmt()}")
     }
 
     override fun somarPreco() {
