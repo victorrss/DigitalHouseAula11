@@ -1,10 +1,22 @@
 package br.com.digitalhouse.aula11
 
-class ComboIndividual(var sanduiche: List<Sanduiche>, var acompanhamento: MutableList<Acompanhamento>, override var nome: String, override var preco: Double, override var desconto: Double) : Combo {
+import br.com.digitalhouse.aula11.util.FormatUtil
+
+class ComboIndividual(
+        var sanduiches: List<Sanduiche>,
+        var acompanhamentos: MutableList<Acompanhamento>,
+        override var nome: String,
+        override var desconto: Double) : Combo {
+    override var preco: Double = 0.0
+
+    init {
+        somarPreco()
+        println("Combo $nome criado, valor total ${FormatUtil.currencyFmt(preco)}")
+    }
+
     override fun somarPreco() {
-        for (sanduiche in sanduiche) {
-            preco += sanduiche.preco
-        }
-        acompanhamento.forEach { acompanhamento -> preco += acompanhamento.preco }
+        sanduiches.forEach { sanduiche -> preco += sanduiche.preco }
+        acompanhamentos.forEach { acompanhamento -> preco += acompanhamento.preco }
+        aplicarDesconto()
     }
 }
